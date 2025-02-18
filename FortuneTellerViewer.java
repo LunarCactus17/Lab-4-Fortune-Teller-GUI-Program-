@@ -15,7 +15,7 @@ public class FortuneTellerViewer {
 
             Font titleFont = new Font("Arial", Font.BOLD, 36);
             Font buttonFont = new Font("Verdana", Font.PLAIN, 16);
-            Font fortuneFont = new Font("Courier New", Font.PLAIN, 14);
+            Font fortuneFont = new Font("Courier New", Font.PLAIN, 30);
 
 
             JPanel topPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
