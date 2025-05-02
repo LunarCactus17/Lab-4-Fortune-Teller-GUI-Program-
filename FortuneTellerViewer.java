@@ -19,8 +19,11 @@ public class FortuneTellerViewer {
 
 
             JPanel topPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
-            ImageIcon fortuneImage = new ImageIcon("fortune_teller.png"); // Replace with your image
-            JLabel titleLabel = new JLabel("Fortune Teller", fortuneImage, JLabel.CENTER);
+            ImageIcon originalIcon = new ImageIcon("fortune_teller.png");
+            Image image = originalIcon.getImage(); // get the original image
+            Image scaledImage = image.getScaledInstance(50, 50, Image.SCALE_SMOOTH); // resize to 200x200
+            ImageIcon resizedIcon = new ImageIcon(scaledImage);
+            JLabel titleLabel = new JLabel("Fortune Teller", resizedIcon, JLabel.CENTER);
             titleLabel.setFont(titleFont);
             titleLabel.setVerticalTextPosition(JLabel.BOTTOM);
             topPanel.add(titleLabel);
